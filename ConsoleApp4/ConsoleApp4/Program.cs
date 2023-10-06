@@ -70,9 +70,13 @@ namespace ConsoleApp4
                     Thread.Sleep(1000);
                     Console.WriteLine(" ");
                     Console.SetCursorPosition(49, 15);
-                    Console.WriteLine("1. Seznam knih");
+                    Console.WriteLine("1. | Rozdělení knih podle ročníku");
                     Console.SetCursorPosition(49, 17);
-                    Console.WriteLine("2. Konec");
+                    Console.WriteLine("2. | Celý seznam");
+                    Console.SetCursorPosition(49, 19);
+                    Console.WriteLine("3. | Exit");
+
+
 
                     string choice = Console.ReadLine();
 
@@ -118,12 +122,28 @@ namespace ConsoleApp4
                             }
                             break;
 
+
                         case "2":
+                            Console.Clear();
+                            foreach (var book in prvni)
+                            {
+
+                               Console.WriteLine($"1. ročník: {book.Jmeno1} - {book.Autor1} ({book.Rok1})");
+                               Console.WriteLine($"2. ročník: {book.Jmeno2} - {book.Autor2} ({book.Rok2})");
+                               Console.WriteLine($"3. ročník: {book.Jmeno3} - {book.Autor3} ({book.Rok3})");
+                               Console.WriteLine($"4. ročníku: {book.Jmeno4} - {book.Autor4} ({book.Rok4})");
+                            }
+                            break;
+
+                        case "3":
                             running = false;
                             break;
                         default:
                             Console.WriteLine("Neplatná volba. Zkuste to znovu.");
                             break;
+
+
+
                     }
                 }
 
