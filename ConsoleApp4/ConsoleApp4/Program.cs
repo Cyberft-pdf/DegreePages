@@ -48,7 +48,7 @@ namespace ConsoleApp4
                 prvni.Add(new Knihy_prvni { Jmeno1 = "Maryša", Autor1 = "Alois Mrštík a Vilém Mrštík", Rok1 = 1894 });
 
 
-                string text = "Vítejte v knihovně přečtené/naplánované literatury!\n\n\n\n";
+                string text = "Welcome to your bookshelf!\n\n\n\n";
 
                 for (int i = 0; i <= text.Length; i++)
                 {
@@ -70,11 +70,11 @@ namespace ConsoleApp4
                     Thread.Sleep(1000);
                     Console.WriteLine(" ");
                     Console.SetCursorPosition(49, 15);
-                    Console.WriteLine("1. | Rozdělení knih podle ročníku");
+                    Console.WriteLine("1. | Distribution of books by grade of school");
                     Console.SetCursorPosition(49, 17);
-                    Console.WriteLine("2. | Celý seznam");
+                    Console.WriteLine("2. | The whole list");
                     Console.SetCursorPosition(49, 19);
-                    Console.WriteLine("3  | Přidat knihu");
+                    Console.WriteLine("3  | Add book");
                     Console.SetCursorPosition(49, 21);
                     Console.WriteLine("4. | Exit");
 
@@ -85,7 +85,7 @@ namespace ConsoleApp4
                         case "1":
                             Console.Clear();
                             Console.WriteLine(" ");
-                            Console.Write("Z jakého ročníku knihu chceš?: ");
+                            Console.Write("What hight school grade do you want the book from?(1, 2, 3, 4): ");
                             string odpoved = Console.ReadLine();
                             switch(odpoved)
                             {
@@ -116,7 +116,7 @@ namespace ConsoleApp4
                                     }
                                     break;
                                 default:
-                                    Console.WriteLine("Neplatná volba. Zkuste to znovu.");
+                                    Console.WriteLine("Invalid choice. Try it again.");
                                     break;
 
                             }
@@ -127,86 +127,90 @@ namespace ConsoleApp4
                             foreach (var book in prvni)
                             {
 
-                               Console.WriteLine($"1. ročník: {book.Jmeno1} - {book.Autor1} ({book.Rok1})");
-                               Console.WriteLine($"2. ročník: {book.Jmeno2} - {book.Autor2} ({book.Rok2})");
-                               Console.WriteLine($"3. ročník: {book.Jmeno3} - {book.Autor3} ({book.Rok3})");
-                               Console.WriteLine($"4. ročníku: {book.Jmeno4} - {book.Autor4} ({book.Rok4})");
+                               Console.WriteLine($"1. grade: {book.Jmeno1} - {book.Autor1} ({book.Rok1})");
+                               Console.WriteLine($"2. grade: {book.Jmeno2} - {book.Autor2} ({book.Rok2})");
+                               Console.WriteLine($"3. grade: {book.Jmeno3} - {book.Autor3} ({book.Rok3})");
+                               Console.WriteLine($"4. grade: {book.Jmeno4} - {book.Autor4} ({book.Rok4})");
                             }
                             break;
 
                         case "3":
                             Console.Clear();
-                            Console.WriteLine("Do jakého ročníku chceš přidat knihu");
+                            Console.Write("What grade do you want to add the book to?: ");
                             string odpoved_rocnik = Console.ReadLine();
 
                                 switch(odpoved_rocnik)
                             {
                                 case "1":
 
-                                    Console.Write("Jméno knížky: ");
+                                    Console.Write("Name of the book: ");
                                     string jmeno_1 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Name of the author: ");
                                     string autor_1 = Console.ReadLine();
 
-                                    Console.Write("Rok knihy: ");
+                                    Console.Write("Year publication: ");
                                     int rok_1 =  Convert.ToInt32(Console.ReadLine());
 
                                     prvni.Add(new Knihy_prvni { Jmeno1 = jmeno_1, Autor1 = autor_1, Rok1 = rok_1 });
 
-                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_1, "autor: " + autor_1, "rok: " + rok_1);
+                                    Console.WriteLine("Kniha byla přidáná: Name:" + jmeno_1, "autor: " + autor_1, "Year: " + rok_1);
 
                                     break; 
                                 case "2":
 
-                                    Console.Write("Jméno knížky: ");
+                                    Console.Write("Name of the book: ");
                                     string jmeno_2 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Name of the author: ");
                                     string autor_2 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Year publication: ");
                                     int rok_2 = Convert.ToInt32(Console.ReadLine());
 
                                     prvni.Add(new Knihy_prvni { Jmeno2 = jmeno_2, Autor2 = autor_2, Rok2 = rok_2 });
 
-                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_2, "autor: " + autor_2, "rok: " + rok_2);
+                                    Console.WriteLine("Book was added: Name:" + jmeno_2, "autor: " + autor_2, "Year: " + rok_2);
 
                                     break; 
                                 
                                 case "3":
 
-                                    Console.Write("Jméno knížky: ");
+                                    Console.Write("Name of the book: ");
                                     string jmeno_3 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Name of the author: ");
                                     string autor_3 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Year publication: ");
                                     int rok_3 = Convert.ToInt32(Console.ReadLine());
 
                                     prvni.Add(new Knihy_prvni { Jmeno3 = jmeno_3, Autor3 = autor_3, Rok3 = rok_3 });
 
-                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_3, "autor: " + autor_3, "rok: " + rok_3);
+                                    Console.WriteLine("Book was added: Name:" + jmeno_3, "autor: " + autor_3, "Year: " + rok_3);
 
                                     break;
 
                                 case "4":
 
-                                    Console.Write("Jméno knížky: ");
+                                    Console.Write("Name of the book: ");
                                     string jmeno_4 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Name of the author: ");
                                     string autor_4 = Console.ReadLine();
 
-                                    Console.Write("Jméno autora: ");
+                                    Console.Write("Year publication: ");
                                     int rok_4 = Convert.ToInt32(Console.ReadLine());
 
                                     prvni.Add(new Knihy_prvni { Jmeno4 = jmeno_4, Autor4 = autor_4, Rok4 = rok_4 });
 
-                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_4, "autor: " + autor_4, "rok: " + rok_4);
+                                    Console.WriteLine("Book was added: Name:" + jmeno_4, "autor: " + autor_4, "Year: " + rok_4);
 
                                     break;
+
+                                default:
+                                    Console.WriteLine("Invalid choice. Try it again.");
+                                    break;                                
                             }
                             break;
 
@@ -216,7 +220,7 @@ namespace ConsoleApp4
 
 
                         default:
-                            Console.WriteLine("Neplatná volba. Zkuste to znovu.");
+                            Console.WriteLine("Invalid choice. Try it again.");
                             break;
 
                     }
