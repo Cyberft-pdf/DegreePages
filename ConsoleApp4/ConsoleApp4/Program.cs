@@ -63,7 +63,7 @@ namespace ConsoleApp4
                 Console.WriteLine(" ");
 
                 bool running = true;
-
+                
                 while (running)
                 {
 
@@ -74,9 +74,9 @@ namespace ConsoleApp4
                     Console.SetCursorPosition(49, 17);
                     Console.WriteLine("2. | Celý seznam");
                     Console.SetCursorPosition(49, 19);
-                    Console.WriteLine("3. | Exit");
-
-
+                    Console.WriteLine("3  | Přidat knihu");
+                    Console.SetCursorPosition(49, 21);
+                    Console.WriteLine("4. | Exit");
 
                     string choice = Console.ReadLine();
 
@@ -122,7 +122,6 @@ namespace ConsoleApp4
                             }
                             break;
 
-
                         case "2":
                             Console.Clear();
                             foreach (var book in prvni)
@@ -136,13 +135,89 @@ namespace ConsoleApp4
                             break;
 
                         case "3":
-                            running = false;
+                            Console.Clear();
+                            Console.WriteLine("Do jakého ročníku chceš přidat knihu");
+                            string odpoved_rocnik = Console.ReadLine();
+
+                                switch(odpoved_rocnik)
+                            {
+                                case "1":
+
+                                    Console.Write("Jméno knížky: ");
+                                    string jmeno_1 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    string autor_1 = Console.ReadLine();
+
+                                    Console.Write("Rok knihy: ");
+                                    int rok_1 =  Convert.ToInt32(Console.ReadLine());
+
+                                    prvni.Add(new Knihy_prvni { Jmeno1 = jmeno_1, Autor1 = autor_1, Rok1 = rok_1 });
+
+                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_1, "autor: " + autor_1, "rok: " + rok_1);
+
+                                    break; 
+                                case "2":
+
+                                    Console.Write("Jméno knížky: ");
+                                    string jmeno_2 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    string autor_2 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    int rok_2 = Convert.ToInt32(Console.ReadLine());
+
+                                    prvni.Add(new Knihy_prvni { Jmeno2 = jmeno_2, Autor2 = autor_2, Rok2 = rok_2 });
+
+                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_2, "autor: " + autor_2, "rok: " + rok_2);
+
+                                    break; 
+                                
+                                case "3":
+
+                                    Console.Write("Jméno knížky: ");
+                                    string jmeno_3 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    string autor_3 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    int rok_3 = Convert.ToInt32(Console.ReadLine());
+
+                                    prvni.Add(new Knihy_prvni { Jmeno3 = jmeno_3, Autor3 = autor_3, Rok3 = rok_3 });
+
+                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_3, "autor: " + autor_3, "rok: " + rok_3);
+
+                                    break;
+
+                                case "4":
+
+                                    Console.Write("Jméno knížky: ");
+                                    string jmeno_4 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    string autor_4 = Console.ReadLine();
+
+                                    Console.Write("Jméno autora: ");
+                                    int rok_4 = Convert.ToInt32(Console.ReadLine());
+
+                                    prvni.Add(new Knihy_prvni { Jmeno4 = jmeno_4, Autor4 = autor_4, Rok4 = rok_4 });
+
+                                    Console.WriteLine("Kniha byla přidáná: Jméno:" + jmeno_4, "autor: " + autor_4, "rok: " + rok_4);
+
+                                    break;
+                            }
                             break;
+
+                        case "4":
+                            running = false; 
+                            break;
+
+
                         default:
                             Console.WriteLine("Neplatná volba. Zkuste to znovu.");
                             break;
-
-
 
                     }
                 }
