@@ -45,7 +45,7 @@ namespace ConsoleApp4
 
                 prvni.Add(new Knihy_prvni { Jmeno1 = "Dorian Gray", Autor1 = "Oscar Wilde", Rok1 = 1890 });
                 prvni.Add(new Knihy_prvni { Jmeno1 = "Lakomec", Autor1 = "Moliér", Rok1 = 1668 });
-                prvni.Add(new Knihy_prvni { Jmeno1 = "Maryša", Autor1 = "Alois Mrštík a Vilém Mrštík", Rok1 = 1894 });
+                prvni.Add(new Knihy_prvni { Jmeno1 = "Maryša", Autor1 = "Alois a Vilém Mrštík", Rok1 = 1894 });
 
 
                 string text = "Welcome to your bookshelf!\n\n\n\n";
