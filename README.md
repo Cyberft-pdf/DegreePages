@@ -46,6 +46,6 @@
     </ul>
   </ol>
 
-  <h2>Note:</h2>
+  <h3>Note:</h3>
   <p>This application serves as a basic template</p>(If you want to use it give me creadit please, thank you:))
 
